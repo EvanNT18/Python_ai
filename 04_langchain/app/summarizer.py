@@ -4,8 +4,6 @@ from langchain.chains.summarize import load_summarize_chain
 from langchain.docstore.document import Document
 from langchain.chains import LLMChain
 from langchain.prompts import PromptTemplate
-
-
 from PyPDF2 import PdfReader
 
 def load_pdf_text(pdf_path: str) -> str:
