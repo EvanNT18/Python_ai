@@ -3,7 +3,6 @@ from dotenv import load_dotenv
 from fastapi import FastAPI
 from typing import TypedDict
 from pydantic import BaseModel
-
 from langgraph.graph import StateGraph
 from langchain_google_genai import ChatGoogleGenerativeAI
 
@@ -28,8 +27,6 @@ def greet_node(state: GreetState) -> GreetState:
     return {
         "result": content.strip()
     }
-
-
 
 builder = StateGraph(GreetState)
 builder.add_node("greet", greet_node)
